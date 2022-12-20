@@ -13,19 +13,19 @@
                 Nome da Pizza
             </label>
 
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" type="text">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none text-center focus:shadow-outline" name="name" type="text">
 
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2 text-center">
                 Descrição da Pizza
             </label>
 
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="description" type="text">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-center" name="description" type="text">
 
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2 text-center">
                 URL da imagem da pizza
             </label>
 
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" name="image_url" type="text">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline text-center" name="image_url" type="text">
 
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2 text-center">
                 Categoria da Pizza
@@ -40,7 +40,7 @@
                 Preço
             </label>
 
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="price" type="number" step=".01" placeholder="Valor decimal - Ex:32,50">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline text-center" name="price" type="number" step=".01" placeholder="Valor decimal - Ex:32,50">
             </div>
         
         <div class="flex items-center justify-between">

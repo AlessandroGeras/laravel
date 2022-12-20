@@ -12,6 +12,10 @@
     <button class="bg-gray-200 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="destroy_pizza" onclick="destroy_pizza(this.id)">
         Excluir Pizza
     </button>
+
+    <button class="bg-gray-200 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="breaktime" onclick="breaktime(this.id)">
+        Definir Recesso
+    </button>
 </div>
 
 @if($errors->any())
