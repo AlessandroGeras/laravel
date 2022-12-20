@@ -7,6 +7,6 @@
 <script src="/assets/js/panel.js"></script>   
 
 <script src="https://kit.fontawesome.com/3639261572.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://deliverybyalessandrogeras.up.railway.app/build/assets/app.c69490ac.css">
+<link rel="stylesheet" href="/assets/css/tailwind.css">
 
 @vite('resources/css/app.css')
