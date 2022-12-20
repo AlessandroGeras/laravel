@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class Admin extends Middleware
+class Admin
 {
     /**
      * Handle an incoming request.
