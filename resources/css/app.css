@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /*darkmode component*/
+    input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    /*darkmode component*/
+    input[type="checkbox"]:checked + label {
+        background: #242424;
+    }
+
+    /*darkmode component*/
+    input[type="checkbox"]:checked + label:after {
+        left: 76px;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, #777, #3a3a3a);
+    }
+
+    /*darkmode component*/
+    label,
+    label:after {
+        transition: 0.3s;
+    }
+
+    /*darkmode component*/
+    label:active:after {
+        width: 87px;
+    }
+
+    /*darkmode component*/
+    input:checked + label svg.sun {
+        fill: #7e7e7e;
+    }
+
+    /*darkmode component*/
+    input:checked + label svg.moon {
+        fill: #fff;
+    }
+
+    /*darkmode component*/
+    label:after {
+        background: linear-gradient(180deg, #ffcc89, #d8860b);
+    }
+}
+
+@layer components {
+    .btn-blue {
+        @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+    }
+}
+
+@layer utilities {
+
+    /*darkmode component*/
+    .shadow {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+            inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    /*darkmode component*/
+    .hr {
+        background-image: radial-gradient(
+            farthest-side at 50% -50%,
+            hsla(0, 0%, 0%, 0.5),
+            hsla(0, 0%, 0%, 0)
+        );
+    }
+}
