@@ -14,8 +14,6 @@
     <x-panel.edit_pizza :pizzas="$pizzas"/>
 
     <x-panel.destroy_pizza :pizzas="$pizzas"/>
-
-    <x-panel.breaktime />
 </main>
 
 @endsection

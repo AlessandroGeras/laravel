@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->integer('permission_id')->unsigned();
-            $table->foreign('permission_id')->references('id')->on('permissions');
+//            $table->foreign('permission_id')->references('id')->on('permissions');
         });
     }
 
