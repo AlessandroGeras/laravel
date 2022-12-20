@@ -8,6 +8,6 @@
 <script src="/assets/js/panel.js"></script>   
 
 <script src="https://kit.fontawesome.com/3639261572.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://github.com/AlessandroGeras/laravel/blob/main/public/assets/css/tailwind.css">
+<link rel="stylesheet" href="/assets/css/tailwind.css">
 
 @vite('resources/css/app.css')
