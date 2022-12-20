@@ -3,11 +3,6 @@
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PizzasController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
-
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
 
 //User Events
 Route::get('/create_user', [UsersController::class, "create_user"])->name('create_user');
