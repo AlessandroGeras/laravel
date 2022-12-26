@@ -16,15 +16,16 @@ date_default_timezone_set('America/Sao_Paulo');
   <x-layouts.head />
 </head>
 
-<body class="bg-gray-700')] dark:bg-blend-overlay" onscroll="getScrollPos()">
+<body class="bg-gray-700 bg-[url('https://cdn.prefirodelivery.com/donvittopizza/assets/imagens/bg.png?v=2021')] dark:bg-blend-overlay" onscroll="getScrollPos()">
 
   <navbar>
     <div>
-      <x-navbar.navbar_logo />
+      teste
     </div>
   </navbar>  
 
   <main>
+    
   </main>
 
 </body>
