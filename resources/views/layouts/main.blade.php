@@ -20,12 +20,11 @@ date_default_timezone_set('America/Sao_Paulo');
 
   <navbar>
     <div>
-      
+      <x-navbar.navbar_logo />
     </div>
   </navbar>  
 
   <main>
-   
   </main>
 
 </body>
