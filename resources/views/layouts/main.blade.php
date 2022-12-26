@@ -20,12 +20,20 @@ date_default_timezone_set('America/Sao_Paulo');
 
   <navbar>
     <div>
-      teste
+      <x-navbar.navbar_logo />
+
+      <x-navbar.navbar_menu :user="$user"/>
+
+      <x-navbar.darkmode />
+
+      <x-navbar.pizza_slice />
+
+      <x-navbar.navbar_status />
     </div>
   </navbar>  
 
   <main>
-    
+    @yield("corpo")
   </main>
 
 </body>
