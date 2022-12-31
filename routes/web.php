@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PizzasController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 //User Events
@@ -12,6 +13,9 @@ Route::post('/store_user', [UsersController::class, "store_user"])->name('store_
 Route::post('/store_pizza', [PizzasController::class, "store_pizza"])->name('store_pizza');
 Route::put('/update_pizza/{id}', [PizzasController::class, "update_pizza"])->name('update_pizza');
 Route::delete('/destroy_pizza/{id}', [PizzasController::class, "destroy_pizza"])->name('destroy_pizza');
+
+//Shop Events
+Route::post('/add_item/{id}', [ShopController::class, "add_item"])->name('add_item');
 
 //Auth Events
 Route::get('/login', [UsersController::class, "login"])->name('login');

@@ -1,5 +1,9 @@
 {{--Grid de pizzas salgadas - Possui slot para pizzas doces--}}
 
+@php
+$login_route=route('login');
+@endphp
+
 <div class="mt-20 mb-10 ml-60">
 
     {{--Pizzas Salgadas--}}
@@ -10,17 +14,33 @@
         @foreach ($pizzas as $pizza)
         @if($pizza->category=="salgada")
 
-        <div><img class="z-10 relative rounded-full border-4 border-yellow-500" src="{{$pizza->image_url}}">
+        <div>
+            <img class="z-10 relative rounded-full border-4 border-yellow-500" src="{{$pizza->image_url}}">
             <div class="mt-[-15px] relative h-60 w-[240px] bg-rose-100 rounded">
                 <div class="text-lg font-medium relative top-5 left-5">{{$pizza->name}}</div>
                 <div class="text-sm relative top-10 left-5 pr-10">{{$pizza->description}}</div>
                 <br>
-                <div class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer">
+
+                @guest
+                <div class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" id="{{$pizza->name}}" onclick="window.location.href='{{$login_route}}'">
                     <div> <i class="fa-solid fa-cart-shopping p-2"></i>
                         @php
                         echo number_format((float)$pizza->price, 2, ',', '');
                         @endphp</div>
                 </div>
+                @endguest
+
+                @auth
+                <form method="POST" action="{{route('add_item',[$pizza->id])}}">
+                    @CSRF
+                    <button class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" id="{{$pizza->name}}" type="submit">
+                        <div> <i class="fa-solid fa-cart-shopping p-2"></i>
+                            @php
+                            echo number_format((float)$pizza->price, 2, ',', '');
+                            @endphp</div>
+                    </button>
+                </form>
+                @endauth
             </div>
         </div>
 
