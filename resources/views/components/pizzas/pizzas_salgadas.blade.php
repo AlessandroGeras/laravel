@@ -22,7 +22,7 @@ $login_route=route('login');
                 <br>
 
                 @guest
-                <div class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" id="{{$pizza->name}}" onclick="window.location.href='{{$login_route}}'">
+                <div class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" onclick="window.location.href='{{$login_route}}'">
                     <div> <i class="fa-solid fa-cart-shopping p-2"></i>
                         @php
                         echo number_format((float)$pizza->price, 2, ',', '');
@@ -31,9 +31,12 @@ $login_route=route('login');
                 @endguest
 
                 @auth
-                <form method="POST" action="{{route('add_item',[$pizza->id])}}">
+                <form class="form_add_item" method="POST" action="{{route('add_item')}}">
                     @CSRF
-                    <button class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" id="{{$pizza->name}}" type="submit">
+                    <input type="hidden" name="name" value="{{$pizza->name}}">
+                    <input type="hidden" name="price" value="{{$pizza->price}}">
+
+                    <button class="text-sm absolute bottom-4 left-1/4 bg-green-700 hover:bg-green-500 text-white w-1/2 text-center pr-2 rounded cursor-pointer" type="submit">
                         <div> <i class="fa-solid fa-cart-shopping p-2"></i>
                             @php
                             echo number_format((float)$pizza->price, 2, ',', '');
@@ -56,3 +59,4 @@ $login_route=route('login');
     {{--Fim Grid Doces--}}
 
 </div>
+

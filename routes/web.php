@@ -15,7 +15,7 @@ Route::put('/update_pizza/{id}', [PizzasController::class, "update_pizza"])->nam
 Route::delete('/destroy_pizza/{id}', [PizzasController::class, "destroy_pizza"])->name('destroy_pizza');
 
 //Shop Events
-Route::post('/add_item/{id}', [ShopController::class, "add_item"])->name('add_item');
+Route::post('/add_item', [ShopController::class, "add_item"])->name('add_item');
 
 //Auth Events
 Route::get('/login', [UsersController::class, "login"])->name('login');
