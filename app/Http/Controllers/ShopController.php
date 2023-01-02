@@ -24,6 +24,6 @@ class ShopController extends Controller
 
         $teste= session('items');
         //echo "<script>console.log($teste);</script>";
-        echo "<script>console.log('Carrinho de Compras em Construção');</script>";
+        echo "<script>alert('Carrinho de Compras em Construção');</script>";
     }
 }
